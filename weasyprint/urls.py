@@ -202,6 +202,7 @@ def default_url_fetcher(url, timeout=10, ssl_context=None):
         has to be closed manually.
 
     """
+    # HTTP 리다이렉트: https://dololak.tistory.com/147
     if UNICODE_SCHEME_RE.match(url):
         # See https://bugs.python.org/issue34702
         if url.startswith('file://'):
