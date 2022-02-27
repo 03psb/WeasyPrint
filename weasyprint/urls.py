@@ -51,6 +51,7 @@ class StreamingGzipFile(GzipFile):
 
 def iri_to_uri(url):
     """Turn a Unicode IRI into an ASCII-only URI that conforms to RFC 3986."""
+    # data url을(그것이 뭐건 간에) 지원하지 않는 느낌이다. 
     if url.startswith('data:'):
         # Data URIs can be huge, but don’t need this anyway.
         return url
